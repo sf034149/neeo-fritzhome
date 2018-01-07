@@ -1,8 +1,8 @@
 {
-  "name": "AVMDevices",
+  "name": "NEEO-Fritz!Box-Adpater",
   "version": "0.0.1",
-  "description": "AVM DECT Devices controlled by Fritz!Box ",
-  "repository": "https://github.com/sf034149/neeo_avm",
+  "description": "FRitz!Box DECT Devices controlled by NEEO",
+  "repository": "https://github.com/sf034149/neeo-fritzhome",
   "license": "MIT",
   "private": false,
   "dependencies": {
