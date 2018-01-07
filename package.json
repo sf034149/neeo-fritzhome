@@ -1,0 +1,30 @@
+{
+  "name": "AVMDevices",
+  "version": "0.0.1",
+  "description": "AVM DECT Devices controlled by Fritz!Box ",
+  "repository": "https://github.com/sf034149/neeo_avm",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "fritzbox.js" : "^2.0.1",
+    "neeo-sdk": "*"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "scripts": {
+    "jshint": "jshint --show-non-errors --verbose ./*.js",
+    "server:avm": "node ./index.js",
+    "clean": "rm -rf ./dist && mkdir -p ./dist",
+    "release": "npm run jshint && npm run clean && npm run release:copy",
+    "release:copy": "cp -r ./lib ./test ./dist && cp .travis.yml .jshintrc .gitignore .editorconfig *.md package.json License ./dist"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "jshint": "^2.9.4",
+    "mocha": "^4.0.1",
+    "mockery": "^2.1.0",
+    "sinon": "^4.0.2"
+  }
+}
