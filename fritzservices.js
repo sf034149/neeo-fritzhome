@@ -39,10 +39,8 @@ async function buildDeviceStateObject (deviceState) {
 async function getSmartDevices() {
     let all_devices = await fritz.getSmartDevices(options);
     if (all_devices.error && options.sid && all_devices.error.message === 'Not authenticated correctly for communication with Fritz!Box.') {
-     console.log("sid before: ", options.sid);
      options.sid = undefined;   // probably SID timed out, get a new one
      all_devices = await fritz.getSmartDevices(options);
-     console.log("sid after: ", options.sid);
     }
     if (all_devices.error) {
      console.log('getSmartDevices Error:', all_devices.error.message);
