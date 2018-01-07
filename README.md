@@ -6,7 +6,9 @@ docker network create \ --driver=macvlan
 --gateway=10.173.40.1 \ --subnet=10.173.40.0/24 
 -o parent=eth0 media
 
-Build with 
+Adpat the credential to access your Fritz!Box in fritzservices.js
+
+Build with:
 
 build -t neeo/fritzhome .
 
